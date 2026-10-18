@@ -21,15 +21,17 @@ uv run pytest -q
 uv run python scripts/lab08_content.py
 uv run python scripts/lab09_hybrid.py --factors 20 --epochs 12 --alpha 0.75
 uv run python scripts/lab09_compare.py
+uv run jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=600 notebooks/E05_recomendador.ipynb
 ```
-Dependencias congeladas en `uv.lock`; `requirements.txt` se genera con `uv export`.
+Dependencias congeladas en `uv.lock`. Sin `uv`: `pip install -r requirements.txt` y luego `pip install -e .` (el archivo se generó con `uv export --format requirements-txt --no-hashes --no-emit-project`).
 
 ## Estructura
 - `src/inf8239_u03/`: carga y validación de datos, recomendadores, métricas.
 - `scripts/`: descarga, auditoría y laboratorios (`lab08_content.py`, `lab08_queries.py`, `lab09_hybrid.py`, `lab09_compare.py`).
 - `tests/`: pruebas automáticas.
 - `reports/`: resultados en CSV.
-- `docs/`: Dataset Card y System Card.
+- `docs/`: Dataset Card, System Card e interpretación de LAB08 y LAB09.
+- `notebooks/E05_recomendador.ipynb`: cuaderno ejecutado con la evidencia del Ejercicio 05.
 - `app/streamlit_app.py`: demostración del recomendador por contenido.
 
 ## Resultados de LAB08
@@ -72,7 +74,7 @@ Lectura: popularidad, colaborativo e híbrido 0,75 no se distinguen en acierto c
 
 ## Estado
 - LAB08 y LAB09: ejecutados y documentados.
-- Pendiente para el Ejercicio 05: notebook ejecutado, `requirements.txt` y PDF de entrega.
+- Ejercicio 05: cuaderno ejecutado y `requirements.txt` incluidos; falta el PDF de entrega.
 
 ## Uso de IA
 Declaración en `docs/AI_USE_DECLARATION.md`.
