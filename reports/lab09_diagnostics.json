@@ -1,0 +1,26 @@
+{
+  "test_rows": 610,
+  "evaluable_rows": 587,
+  "users_skipped_hybrid": 0,
+  "rmse_global_mean": 1.1156660882916472,
+  "rmse_item_mean": 1.0502612591083604,
+  "rmse_mf_seed_first": 1.0264183126391635,
+  "args": {
+    "seeds": [
+      42,
+      7,
+      123
+    ],
+    "factors": 20,
+    "epochs": 12,
+    "alphas": [
+      0.25,
+      0.75
+    ],
+    "k": 10,
+    "max_users": null
+  },
+  "users_with_heldout_not_after_last_train_timestamp": 94,
+  "users_with_strictly_later_heldout": 516,
+  "users_total": 610
+}
